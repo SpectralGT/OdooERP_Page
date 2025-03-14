@@ -1,13 +1,68 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Mono+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <title>OdooERP_Page</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+  <header>
+    <div id="logo">
+      Centauri
+    </div>
+    <div id="links">
+
+      <p>Home</p>
+      <p>Services</p>
+      <p>About Use</p>
+      <p>Contact</p>
+    </div>
+  </header>
+
+<section id="hero">
+  HI
+</section>
+
+  <section id="1">
+    <div class="pop-div">hihi1</div>
+  </section>
+  <section id="1">
+    <div class="pop-div">hihi2</div>
+  </section>
+  <section id="1">
+    <div class="pop-div">hihi3</div>
+  </section>
+  <section id="1">
+    <div class="pop-div">hihi4</div>
+  </section>
+  <script type="module" src="/src/main.ts"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const popDivs = document.querySelectorAll('.pop-div');
+
+      window.addEventListener('scroll', function() {
+        const scrollY = window.scrollY;
+
+        popDivs.forEach((div, index) => {
+          const threshold = 500 + index * 300;
+
+          if (scrollY > threshold && scrollY<(threshold+300)) {
+            div.classList.add('active');
+          } else {
+            div.classList.remove('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
 </html>
