@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Mono+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Mono+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
   <title>OdooERP_Page</title>
   <link rel="stylesheet" href="/src/style.css">
 </head>
@@ -26,40 +28,53 @@
     </div>
   </header>
 
-<section id="hero">
-  HI
-</section>
+  <section id="hero">
+    HI
+  </section>
 
   <section id="1">
     <div class="pop-div">hihi1</div>
   </section>
-  <section id="1">
+  <section id="2">
     <div class="pop-div">hihi2</div>
   </section>
-  <section id="1">
+  <section id="3">
     <div class="pop-div">hihi3</div>
   </section>
-  <section id="1">
+  <section id="4">
     <div class="pop-div">hihi4</div>
   </section>
   <script type="module" src="/src/main.ts"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const popDivs = document.querySelectorAll('.pop-div');
+    document.addEventListener('DOMContentLoaded', function () {
 
-      window.addEventListener('scroll', function() {
-        const scrollY = window.scrollY;
+      window.addEventListener('scroll', function () {
 
-        popDivs.forEach((div, index) => {
-          const threshold = 500 + index * 300;
 
-          if (scrollY > threshold && scrollY<(threshold+300)) {
-            div.classList.add('active');
-          } else {
-            div.classList.remove('active');
+        const popDivs = document.querySelectorAll('.pop-div');
+        const sections = document.querySelectorAll('section');
+        let currentSection = '';
+
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 3) {
+            currentSection = section.id;
           }
         });
+
+        console.log(currentSection);
+
+        popDivs.forEach((div)=>{
+          if(div.parentElement.id == currentSection){
+            div.classList.add('active');
+          }
+          else{
+            div.classList.remove('active');
+          }
+        })
+
+
       });
     });
   </script>
