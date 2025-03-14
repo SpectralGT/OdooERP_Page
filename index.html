@@ -10,7 +10,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Mono+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
-  <title>OdooERP_Page</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <title>OdooERP_Page</title>
   <link rel="stylesheet" href="/src/style.css">
 </head>
 
@@ -23,27 +26,122 @@
 
       <p>Home</p>
       <p>Services</p>
-      <p>About Use</p>
+      <p>About Us</p>
       <p>Contact</p>
     </div>
   </header>
 
   <section id="hero">
-    HI
+    <h1>Launch Your Business Efficiently <br> with Odoo Startup</h1>
+    <p>Centauri Consultancy provides tailored Odoo implementation<br>
+      for startups, streamlining operations and driving growth.<br>
+      Get a fast, cost-effective solution designed for your unique needs.</p>
+    <button>Get a Free Consultation</button>
   </section>
 
   <section id="1">
-    <div class="pop-div">hihi1</div>
+    <div class="pop-div">
+      <h3>Marketing Optimization</h3>
+      <div class="spacer"></div>
+      <p class="desc">Centauri Consultancy assists in developing
+        strategic market networks and targeted campaigns, ensuring your brand reaches the right audience.</p>
+      <p>Targeted Campaigns</p>
+      <p>Strategic Market Networks</p>
+      <p>Customer Segmentation</p>
+      <p>Brand Awareness</p>
+    </div>
   </section>
   <section id="2">
-    <div class="pop-div">hihi2</div>
+    <div class="pop-div">
+      <h3>Sales Efficiency</h3>
+      <div class="spacer"></div>
+
+      <p class="desc">Formulate effective sales plans and stay competitive by identifying customer demands and market
+        trends. Odoo
+        enables streamlined sales processes, leading to increased conversions and revenue growth.</p>
+      <p>Sales Forecasting</p>
+      <p>Customer Relationship Management (CRM)</p>
+      <p>Sales Pipeline Management</p>
+      <p>Lead Scoring</p>
+    </div>
   </section>
   <section id="3">
-    <div class="pop-div">hihi3</div>
+    <div class="pop-div">
+      <h3>Operational Streamlining</h3>
+      <div class="spacer"></div>
+
+      <p class="desc">Simplify complex workflows and automate repetitive tasks. Odoo's integrated modules improve
+        operational
+        efficiency, allowing you to focus on core business activities and accelerate growth.</p>
+      <p>Inventory Management</p>
+      <p>Order Fulfillment</p>
+      <p>Procurement</p>
+      <p>Project Management</p>
+    </div>
   </section>
   <section id="4">
-    <div class="pop-div">hihi4</div>
+    <div class="pop-div">
+      <h3>Data-Driven Insights</h3>
+      <div class="spacer"></div>
+
+      <p class="desc">Gain valuable insights from real-time data to make informed business decisions. Odoo provides
+        comprehensive
+        reporting and analytics, empowering you to optimize performance and drive strategic growth.</p>
+      <p>Business Intelligence (BI) Dashboards</p>
+      <p>Performance Tracking</p>
+      <p>Trend Analysis</p>
+      <p>Customer Behavior Analysis</p>
+    </div>
+    
+    
+    
   </section>
+  
+  <section>
+
+    <footer class="full-screen-footer">
+      <div>
+        <h3>Visit Us</h3>
+        <p>Office No.- 315, Aarza Square 2, 7th Avenue Township, Sector 4, Gaur City 1, Greater Noida West, UP, India - 201308</p>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Products & Services</h3>
+        <ul>
+          <li><a href="#">Product 1</a></li>
+          <li><a href="#">Product 2</a></li>
+          <li><a href="#">Service A</a></li>
+          <li><a href="#">Service B</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect With Us</h3>
+        <div class="social-icons">
+          <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2024 Your Company. All rights reserved.
+      </div>
+    </footer>
+
+</section>
   <script type="module" src="/src/main.ts"></script>
 
   <script>
@@ -65,11 +163,11 @@
 
         console.log(currentSection);
 
-        popDivs.forEach((div)=>{
-          if(div.parentElement.id == currentSection){
+        popDivs.forEach((div) => {
+          if (div.parentElement.id == currentSection) {
             div.classList.add('active');
           }
-          else{
+          else {
             div.classList.remove('active');
           }
         })
@@ -78,6 +176,9 @@
       });
     });
   </script>
+
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
