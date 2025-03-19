@@ -73,22 +73,22 @@ function loadModel(): void {
 
 //Light setup
 function setupLighting(): void {
-    const createLight = (x: number, y: number, z: number): THREE.DirectionalLight => {
-        const light = new THREE.DirectionalLight(0xffffff, 1);
-        light.position.set(x, y, z);
-        light.shadow.mapSize.width = 4096;
-        light.shadow.mapSize.height = 4096;
-        // light.shadow.camera.top=100;
-        // light.shadow.camera.bottom=100;
-        // light.shadow.camera.left=100;
-        // light.shadow.camera.right=100;
-        light.shadow.normalBias = 0;
-        light.shadow.bias = 0.002;
-        light.shadow.intensity = 1;
-        light.shadow.radius = 1;
-        light.castShadow = true;
-        return light;
-    };
+    // const createLight = (x: number, y: number, z: number): THREE.DirectionalLight => {
+    //     const light = new THREE.DirectionalLight(0xffffff, 1);
+    //     light.position.set(x, y, z);
+    //     light.shadow.mapSize.width = 4096;
+    //     light.shadow.mapSize.height = 4096;
+    //     // light.shadow.camera.top=100;
+    //     // light.shadow.camera.bottom=100;
+    //     // light.shadow.camera.left=100;
+    //     // light.shadow.camera.right=100;
+    //     light.shadow.normalBias = 0;
+    //     light.shadow.bias = 0.002;
+    //     light.shadow.intensity = 1;
+    //     light.shadow.radius = 1;
+    //     light.castShadow = true;
+    //     return light;
+    // };
     scene.add(new THREE.AmbientLight(0xaaaaaa, 5));
     // scene.add(createLight(5, 5, 7.5));
     // scene.add(createLight(-5, 5, 7.5));
