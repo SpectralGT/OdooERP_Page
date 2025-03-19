@@ -114,7 +114,7 @@ function postProcessing(): void {
     composer.addPass(new RenderPass(scene, camera));
     composer.addPass(new UnrealBloomPass(new THREE.Vector2(256, 256), 0.2, 0, 0));
     composer.addPass(new ShaderPass(VignetteShader));
-    composer.addPass(new GTAOPass( scene, camera, WINDOW_WIDTH,WINDOW_HEIGHT ));
+    composer.addPass(new GTAOPass(scene, camera, WINDOW_WIDTH, WINDOW_HEIGHT));
 
 
     composer.addPass(new OutputPass());

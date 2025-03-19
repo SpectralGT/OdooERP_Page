@@ -34,7 +34,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 5;
+  z-index: 1;
 }
 
 header #logo {
@@ -42,6 +42,7 @@ header #logo {
   font-weight: 900;
   font-size: 2rem;
   color: var(--text-color);
+  z-index: 1;
 }
 
 #links {
@@ -142,6 +143,7 @@ section {
   text-align: center;
   font-size: clamp(10px, 10vw, 50px);
   margin-bottom: 0;
+  z-index: 2;
 }
 
 #hero p {
@@ -149,6 +151,8 @@ section {
   font-family: 'Space Mono', sans-serif;
   font-size: 1rem;
   font-weight: 900;
+  z-index: 2;
+
 }
 
 #hero button {
